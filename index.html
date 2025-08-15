@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Boolu Bask</title>
+  
+<link rel="stylesheet" href="styles.css"/>
+
+
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <div class="ui-overlay">
+      <div class="score-display">Score: <span id="scoreDisplay">0</span></div>
+      <div class="lives-display">Lives: <span id="livesDisplay">3</span></div>
+    </div>
+
+    <div id="startScreen" class="game-screen">
+      <h1>New Boolu Bask</h1>
+      <p>Catch the falling balls with your basket!</p>
+      <button class="btn" onclick="startGame()">Start Game</button>
+      <div class="instructions">
+        <p>🎮 Move with Arrow Keys, Mouse, or Touch</p>
+        <p>🏀 Catch balls to score points</p>
+        <p>❤️ Don’t miss them — you have 3 lives</p>
+      </div>
+    </div>
+
+    <div id="gameOverScreen" class="game-screen hidden">
+      <h2>Game Over!</h2>
+      <p>Final Score: <span id="finalScore">0</span></p>
+      <p id="gameOverMessage"></p>
+      <button class="btn" onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
